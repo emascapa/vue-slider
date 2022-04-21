@@ -41,7 +41,7 @@ const app = new Vue(
 
         methods: {
             buttonUp() {
-                console.log('ciaoooo');
+                console.log('SU');
                 if (this.img_counter === 0) {
                     this.img_counter = this.places.length - 1
                 } else {
@@ -49,7 +49,7 @@ const app = new Vue(
                 }
             },
             buttonDown() {
-                console.log('arrivederciiii');
+                console.log('GIU`');
                 if (this.img_counter === this.places.length - 1) {
                     this.img_counter = 0
                 } else {
@@ -58,7 +58,7 @@ const app = new Vue(
             },
 
             startSlider: function() {
-                this.timer = setInterval(this.buttonDown, 4000);
+                this.timer = setInterval(this.buttonDown, 3000);
 
                 console.log('TIMER INIZIATO');
             },
@@ -71,8 +71,10 @@ const app = new Vue(
                 console.log('TIMER STOPPATO');
             },
 
-            imgClick() {
-                console.log('HELLOOOOOO');
+            imgClick(index) {
+                console.log(`ciao index ${index}`);
+
+                this.img_counter = index;
             }
         }
     }
