@@ -30,10 +30,16 @@ const app = new Vue(
                 }
             ],
             img_counter: 0,
-
-
+            
             active_img: 'border border-4 border-info',
+
+            timer: null,
         },
+
+        mounted: function() {
+            this.timer = setInterval(this.buttonDown, 4000);
+        },
+        
         methods: {
             buttonUp() {
                 console.log('ciaoooo');
@@ -51,6 +57,10 @@ const app = new Vue(
                     this.img_counter++
                 }
             },
+
+            imgClick() {
+                console.log('HELLOOOOOO');
+            }
         }
     }
 )
