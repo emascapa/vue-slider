@@ -5,12 +5,25 @@
 .image_view {
     width: 80%;
     /* background-color: red; */
+    position: relative;
 }
 
 .image_view > img {
     /* width: 100%; */
     height: 100%;
     object-fit: cover;
+}
+
+.place_info {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    z-index: 10;
+}
+
+.place_info > * {
+    text-shadow: 2px 2px 30px white;
 }
 
 img {

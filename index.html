@@ -26,6 +26,10 @@
 
                 <div class="image_view">
                     <img :src="places[img_counter].image" alt="" class="">
+                    <div class="place_info text-white text-end p-4">
+                        <h4>{{places[img_counter].title}}</h4>
+                        <p>{{places[img_counter].text}}</p>
+                    </div>
                 </div>
                 <div class="slider d-flex flex-column" @mouseover="stopSlider" @mouseleave="startSlider">
                     <!-- <div class="navigation py-2 d-flex flex-column align-items-center justify-content-between"> -->
