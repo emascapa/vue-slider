@@ -35,11 +35,10 @@ const app = new Vue(
 
             timer: null,
         },
-
         mounted: function() {
-            this.timer = setInterval(this.buttonDown, 4000);
+            this.startSlider();
         },
-        
+
         methods: {
             buttonUp() {
                 console.log('ciaoooo');
@@ -56,6 +55,20 @@ const app = new Vue(
                 } else {
                     this.img_counter++
                 }
+            },
+
+            startSlider: function() {
+                this.timer = setInterval(this.buttonDown, 4000);
+
+                console.log('TIMER INIZIATO');
+            },
+
+            stopSlider: function() {
+                clearInterval(this.timer);
+
+                this.timer = null; 
+
+                console.log('TIMER STOPPATO');
             },
 
             imgClick() {
