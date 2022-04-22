@@ -31,7 +31,7 @@
                         <p>{{places[img_counter].text}}</p>
                     </div>
                 </div>
-                <div class="slider d-flex flex-column" @mouseover="stopSlider" @mouseleave="startSlider">
+                <div class="slider d-flex flex-column" @mouseenter="stopSlider" @mouseleave="startSlider">
                     <!-- <div class="navigation py-2 d-flex flex-column align-items-center justify-content-between"> -->
                     <div class="bg-light rounded rounded-pill btn_arrow arrow_up mt-2" @click="buttonUp">
                         <i class="fa-solid fa-chevron-up"></i>
